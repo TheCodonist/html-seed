@@ -1,0 +1,13 @@
+
+body {
+    background-color: #f0f0f0;
+    color: #868686;
+    font-family: 'Sintony', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Acme', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
