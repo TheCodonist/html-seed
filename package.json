@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Aitch",
+  "author": "Codonist",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.17.5",
-    "gulp": "^3.9.1",
-    "gulp-watch": "^4.3.10"
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-watch": "^5.0.1"
   }
 }

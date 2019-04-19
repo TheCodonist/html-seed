@@ -1,20 +1,23 @@
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
+const {series,parallel} = require('gulp');
+const watch = require('gulp-watch');
+const browserSync = require('browser-sync').create();
 
+function clean(cb) {
+    cb();
+}
 
-gulp.task('watch',function(){
-    watch(['./*.html','./*.css','./css/**/*','./js/**/*'],reload)
-});
+function watch_changes() {
+    watch(['./*.html','./assets/*.css','./assets/css/**/*','./assets/js/**/*'],function () {
+        browserSync.reload()
+    });
+}
 
-gulp.task('browser-sync',['watch'],function(){
+function browser_sync() {
     browserSync.init({
-        server: {
-            baseDir: "./"
+        server : {
+            baseDir : './'
         }
     });
-});
+}
 
-gulp.task('default',['browser-sync']);
-
+exports.default = parallel(watch_changes,browser_sync);
